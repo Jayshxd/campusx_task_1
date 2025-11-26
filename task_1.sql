@@ -25,3 +25,7 @@ select *
 from ins where region like '%south%';
 
 
+-- No of patient having normal blood pressure. Normal range[90-120]
+select *
+from ins where bloodpressure between 90 and 121;
+
