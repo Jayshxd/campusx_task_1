@@ -14,3 +14,9 @@ select min(ins.bloodpressure) as MinBp , max(ins.bloodpressure) as MaxBp from in
 
 -- Find no of unique patients who are not from southwest region.
 select count( PatientID) from ins where region != 'southwest'
+
+
+-- Total claim amount from male smoker.
+select sum(ins.claim) as sum_claims from ins where gender = 'male' and smoker like '%Yes%'
+
+
