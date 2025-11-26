@@ -37,3 +37,10 @@ select count(*) from ins where age<17 and bloodpressure between 80+age*2 and 100
 -- What is the average claim amount for non-smoking female patients who are diabetic?
 select avg(ins.claim) from ins where smoker like '%no%' and gender in ('female','Female') and diabetic like '%yes%'
 
+
+-- Write a SQL query to update the claim amount for the patient with PatientID = 1234 to 5000.
+update ins
+set claim = 5000
+where PatientID = 1234;
+
+
