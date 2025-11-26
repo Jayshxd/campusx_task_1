@@ -29,3 +29,11 @@ from ins where region like '%south%';
 select *
 from ins where bloodpressure between 90 and 121;
 
+
+-- No of pateint belo 17 years of age having normal blood pressure as per below formula -
+-- BP normal range = 80+(age in years × 2) to 100 + (age in years × 2)
+select count(*) from ins where age<17 and bloodpressure between 80+age*2 and 100+age*2;
+
+-- What is the average claim amount for non-smoking female patients who are diabetic?
+select avg(ins.claim) from ins where smoker like '%no%' and gender in ('female','Female') and diabetic like '%yes%'
+
