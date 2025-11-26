@@ -8,15 +8,20 @@ from ins where bmi between 30 and 45;
 
 
 -- Show minimum and maximum bloodpressure of diabetic patient who smokes. Make column names as MinBP and MaxBP respectively.
-select min(ins.bloodpressure) as MinBp , max(ins.bloodpressure) as MaxBp from ins where diabetic = 'Yes' and smoker = 'Yes'
+select min(ins.bloodpressure) as MinBp , max(ins.bloodpressure) as MaxBp from ins where diabetic = 'Yes' and smoker = 'Yes';
 
 
 
 -- Find no of unique patients who are not from southwest region.
-select count( PatientID) from ins where region != 'southwest'
+select count( PatientID) from ins where region != 'southwest';
 
 
 -- Total claim amount from male smoker.
-select sum(ins.claim) as sum_claims from ins where gender = 'male' and smoker like '%Yes%'
+select sum(ins.claim) as sum_claims from ins where gender = 'male' and smoker like '%Yes%';
+
+
+-- Select all records of south region.
+select *
+from ins where region like '%south%';
 
 
