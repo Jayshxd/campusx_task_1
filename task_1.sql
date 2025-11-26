@@ -43,4 +43,8 @@ update ins
 set claim = 5000
 where PatientID = 1234;
 
+-- Write a SQL query to delete all records for patients who are smokers and have no children.
+delete from ins
+where smoker = 'Yes' and children = 0;
+
 
